@@ -45,13 +45,13 @@ int main(){
         }
         
         BeginDrawing();
-            ClearBackground(RAYWHITE);
+            ClearBackground(BLACK);
 
             // Drawing the Game Board
             for(int i = 0; i < rows; i++){
                 for(int j = 0; j < columns; j++){
                     if(cells[i][j] == 1){
-                        DrawRectangle(j * 10, i * 10, 10, 10, BLACK);
+                        DrawRectangle(j * 10, i * 10, 10, 10, RAYWHITE);
                     }
                 }
             } 
