@@ -20,7 +20,7 @@ int main(){
     int liveNeighbors = 0;
     int frameCounter = 0;
 
-    InitWindow(screenWidth, screenHeight, "Practicing Raylib :)");
+    InitWindow(screenWidth, screenHeight, "GameOfLife :)");
     SetTargetFPS(30);
 
     // Displaying starting logo
