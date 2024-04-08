@@ -68,21 +68,21 @@ int main(){
             for(int j = 0; j < columns; j++){
                 // counting living neighbors
                 liveNeighbors = 0;
-                if(cellsCopy[i][j+1] == 1)
+                if(j+1 < columns && cellsCopy[i][j+1] == 1)
                     liveNeighbors++;
-                if(cellsCopy[i+1][j+1] == 1)
+                if(j+1 < columns && i+1 < rows && cellsCopy[i+1][j+1] == 1)
                     liveNeighbors++;
-                if(cellsCopy[i-1][j+1] == 1)
+                if(j+1 < columns && i-1 >= 0 && cellsCopy[i-1][j+1] == 1)
                     liveNeighbors++;
-                if(cellsCopy[i][j-1] == 1)
+                if(j-1 >= 0 && cellsCopy[i][j-1] == 1)
                     liveNeighbors++;
-                if(cellsCopy[i-1][j] == 1)
+                if(i-1 >= 0 && cellsCopy[i-1][j] == 1)
                     liveNeighbors++;
-                if(cellsCopy[i+1][j] == 1)
+                if(i+1 < rows && cellsCopy[i+1][j] == 1)
                     liveNeighbors++;
-                if(cellsCopy[i-1][j-1] == 1)
+                if(j-1 >= 0 && i-1 >= 0 && cellsCopy[i-1][j-1] == 1)
                     liveNeighbors++;
-                if(cellsCopy[i+1][j-1] == 1)
+                if(j-1 >= 0 && i+1 < rows && cellsCopy[i+1][j-1] == 1)
                     liveNeighbors++;
 
                 // Implementing rules based on neighbor-count
